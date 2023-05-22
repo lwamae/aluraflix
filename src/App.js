@@ -1,11 +1,21 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import NuevosVideos from './pages/NuevosVideos';
 import Header from './componentes/Header/Header';
+import Footer from './componentes/Footer/Footer';
+import GlobalStyle from './GlobalStyle';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-    </div>
+    <Router>
+      <GlobalStyle/>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/nuevosvideos' element={<NuevosVideos />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 
