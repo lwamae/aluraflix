@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 const H1 = styled.h1`
     color: #fff;
@@ -11,9 +12,16 @@ const StyledForm = styled.form`
     flex-direction: column;
     gap: 40px;
     margin: 35px;
-    
     hover: #53585D;
 `
+
+const BtnCateg = styled.a`
+  /* Adapt the colors based on primary prop */
+  background: #2A7AE4;
+  font-size: 1em;
+  padding: 0.25em 1em;
+  border-radius: 3px;
+`;
 
 const NuevosVideos = () => {
   return (
@@ -30,6 +38,7 @@ const NuevosVideos = () => {
             <input type="text" placeholder="Codigo de seguridad" />
             <button type="submit">Guardar</button>
             <button>Limpiar</button>
+            <BtnCateg><Link to="/nuevacateg">Nueva Categoria</Link></BtnCateg>
         </StyledForm>
     </main>
   )

@@ -1,13 +1,17 @@
 import Banner from '../componentes/Banner/Banner';
 import VideoSlider from '../componentes/VideoSlider/VideoSlider';
+import Categ from '../componentes/Categ';
+import VideosList from '../componentes/VideoSlider/VideosList';
 
 const Home = () => {
   return (
     <main>
-      <div className="container">
-      </div>
       <Banner/>
-      <VideoSlider/>
+      <VideosList/>
+      <Categ/>
+      <VideosList/>
+      <Categ/>
+      <VideosList/>
     </main>
   )
 }
