@@ -27,6 +27,15 @@ const BtnHeader = styled.a`
   border-radius: 3px;
 `;
 
+const StyledLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    color: #fff;
+  }
+`;
+
 const Header = () => {
   return (
     <StyledHeader>
@@ -34,7 +43,7 @@ const Header = () => {
         <Logo src={logo} alt="logo" />
       </Link>
       <div>
-        <BtnHeader><Link to="/nuevosvideos">Nuevos Videos</Link></BtnHeader>
+        <BtnHeader><StyledLink to="/nuevosvideos">Nuevos Videos</StyledLink></BtnHeader>
       </div>
     </StyledHeader>
   );
